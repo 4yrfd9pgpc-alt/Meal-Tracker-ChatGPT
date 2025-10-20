@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>MealTrack</title>
+  <meta name="theme-color" content="#0b0c10">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="assets/icon-180.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="row">
+        <img src="assets/icon-64.png" width="28" height="28" alt="logo" style="border-radius:6px">
+        <div class="app-title">MealTrack</div>
+        <span class="badge" id="installStatus">Offline-ready</span>
+      </div>
+      <div class="row">
+        <button id="installBtn" class="button">Install</button>
+        <button id="shareBtn" class="button ghost">Share</button>
+      </div>
+    </header>
+    <nav class="tabs" id="tabs"></nav>
+    <main id="view"></main>
+    <footer class="footer">Works offline • Private (local only) • <span id="version"></span></footer>
+  </div>
+  <div class="install-hint hidden" id="installHint">
+    <div class="row" style="justify-content:space-between">
+      <div>On iPhone: tap <span class="kbd">Share</span> → <span class="kbd">Add to Home Screen</span></div>
+      <button class="button" onclick="document.getElementById('installHint').classList.add('hidden')">Got it</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
